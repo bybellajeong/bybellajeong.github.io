@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>정보영 | Quant Research Portfolio</title>
+<meta name="description" content="정보영의 퀀트 리서치·자산배분 포트폴리오. 리서치 보고서, 글, 퀀트 모델.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --ink:#15191f; --ink2:#525862; --ink3:#8a8f98;
+  --line:#e4e2dc; --navy:#14243b; --accent:#2a5fa8; --tag:#eef2f8;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f1319; --surface:#171c24; --ink:#eef0f3; --ink2:#b3b9c3; --ink3:#7d8490;
+    --line:#2a313c; --navy:#0b1420; --accent:#7fb0ee; --tag:#1f2835; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:16px;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{background:var(--navy);color:#fff;padding:64px 0 52px}
+.kicker{font-size:12px;letter-spacing:.18em;color:#9fb6d6;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:40px;line-height:1.2;margin:0 0 6px;font-weight:700;letter-spacing:-.01em}
+.role{font-size:18px;color:#dbe4f0;margin-bottom:22px}
+.lead{font-size:16.5px;color:#c9d5e6;max-width:640px;margin:0 0 26px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:7px 14px;font-size:14px}
+.links a:hover{background:rgba(255,255,255,.12);text-decoration:none}
+
+/* sections */
+section{padding:44px 0 8px}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);
+  margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--line);font-weight:600}
+
+/* work cards */
+.work{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  display:grid;grid-template-columns:300px 1fr;overflow:hidden;margin-bottom:20px}
+.work .thumb{background:#fff;border-right:1px solid var(--line);display:flex;align-items:center;padding:14px}
+.work .thumb img{width:100%;height:auto;display:block}
+.work .body{padding:22px 24px}
+.meta{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--ink3);margin-bottom:8px}
+.tag{background:var(--tag);color:var(--accent);border-radius:4px;padding:1px 8px;font-weight:600}
+.work h3{font-size:20px;line-height:1.35;margin:0 0 4px}
+.work .sub{font-size:14px;color:var(--ink2);margin:0 0 12px}
+.work ul{margin:0 0 16px;padding-left:18px;font-size:14.5px;color:var(--ink2)}
+.work li{margin-bottom:3px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font-size:14px;font-weight:600;border-radius:6px;padding:7px 14px;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--surface)}
+.btn:hover{text-decoration:none;opacity:.85}
+.soon{border:1px dashed var(--line);border-radius:10px;padding:18px 24px;color:var(--ink3);font-size:14.5px}
+
+/* experience */
+.exp{display:grid;grid-template-columns:150px 1fr;gap:4px 20px;margin-bottom:18px}
+.exp .when{color:var(--ink3);font-size:14px;padding-top:2px;font-variant-numeric:tabular-nums}
+.exp .org{font-weight:700}
+.exp .what{color:var(--ink2);font-size:14.5px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cols h4{margin:0 0 6px;font-size:15px}
+.cols p{margin:0;color:var(--ink2);font-size:14.5px}
+
+footer{padding:36px 0 56px;color:var(--ink3);font-size:13px}
+footer .wrap{border-top:1px solid var(--line);padding-top:20px}
+
+@media (max-width:700px){
+  header{padding:44px 0 38px} h1{font-size:32px}
+  .work{grid-template-columns:1fr}
+  .work .thumb{border-right:none;border-bottom:1px solid var(--line)}
+  .exp{grid-template-columns:1fr;gap:0} .cols{grid-template-columns:1fr;gap:18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Quant Research · Asset Allocation</div>
+    <h1>정보영</h1>
+    <div class="role">Boyoung Jeong</div>
+    <p class="lead">
+      보험사에서 해외채권 운용과 자산배분 모델링을 했고, 이후 디지털자산 파생상품 구조 설계와
+      머신러닝 기반 자산배분·퀀트 전략 개발을 했습니다. 거시 데이터와 자산가격의 관계를 실증적으로 분석하는 리서치를 하고 있습니다.
+    </p>
+    <div class="links">
+      <!-- TODO: 아래 두 줄의 주소를 본인 것으로 바꾸세요 -->
+      <a href="https://github.com/bybellajeong">GitHub</a>
+      <a href="mailto:by.bella.jeong@gmail.com">Email</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="work">
+    <h2>Research &amp; Work</h2>
+
+    <!-- ===== 작업물 카드 시작 ===== -->
+    <article class="work">
+      <div class="thumb"><img src="assets/misery-index.png" alt="주식수익률과 실업률·인플레이션의 10년 rolling 상관계수"></div>
+      <div class="body">
+        <div class="meta"><span class="tag">Research</span><span>2026.10 · Macro · Cross-Asset</span></div>
+        <h3>금리가 정하는 '고통'의 가격</h3>
+        <p class="sub">Misery Index 분해로 본 실업률·인플레이션과 자산가격의 레짐 의존적 관계 (미국 1955–2026)</p>
+        <ul>
+          <li>저금리에서는 실업률이, 고금리에서는 인플레이션이 주가를 설명한다.</li>
+          <li>인플레이션이 주가에 미치는 부호가 금리 레짐에 따라 뒤집힌다.</li>
+          <li>주식·미국채·주택·금 4개 자산 비교, Newey-West 회귀와 강건성 검증.</li>
+        </ul>
+        <div class="btns">
+          <a class="btn primary" href="papers/misery-index-regime-research.pdf" target="_blank" rel="noopener">보고서 PDF</a>
+          <a class="btn" href="https://github.com/bybellajeong/misery-index-regime" target="_blank" rel="noopener">GitHub 코드</a>
+        </div>
+      </div>
+    </article>
+    <!-- ===== 작업물 카드 끝 ===== -->
+
+    <!--
+    새 작업물을 추가할 때는 위 <article class="work"> ... </article> 블록을 복사해 붙여넣고
+    그림(assets/), PDF(papers/), 제목·요약·링크만 바꾸면 됩니다.
+    태그는 Research / Essay / Model 중에서 골라 쓰세요.
+    -->
+
+    <div class="soon">다음 작업물을 준비하고 있습니다.</div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="exp">
+      <div class="when">2022.07 – 2024.02</div>
+      <div><div class="org">쿼터백그룹 / Moonbit LLC</div>
+        <div class="what">AI Algorithm / Quant Developer — 머신러닝 기반 자산배분, 디지털자산 전략 개발</div></div>
+    </div>
+    <div class="exp">
+      <div class="when">2020.02 – 2021.04</div>
+      <div><div class="org">소프트위즈</div>
+        <div class="what">FID팀 매니저 — 틱데이터 수집 시스템, 차익거래 전략 백테스트, 해외지사 선물 딜링데스크 구축, 자기자본 리스크관리 정책</div></div>
+    </div>
+    <div class="exp">
+      <div class="when">2019.09 – 2020.01</div>
+      <div><div class="org">알투브이</div>
+        <div class="what">Director of Derivatives Structuring — 비트코인 무기한 계약·청산소 등 파생상품 플랫폼 금융구조 설계, 유동성 공급 헤지 알고리즘</div></div>
+    </div>
+    <div class="exp">
+      <div class="when">2018.07 – 2019.07</div>
+      <div><div class="org">후오비코리아</div>
+        <div class="what">전략기획실 Analyst</div></div>
+    </div>
+    <div class="exp">
+      <div class="when">2013.12 – 2018.07</div>
+      <div><div class="org">KB손해보험</div>
+        <div class="what">시장자산운용부 포트폴리오 매니저 — 해외채권 운용, FX 헤지, 구조화채권, Black-Litterman 자산배분 모델링</div></div>
+    </div>
+    <div class="exp">
+      <div class="when">인턴</div>
+      <div><div class="what">한국투자공사(KIC) 주식운용팀 · INVEX투자자문 알파투자팀</div></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Education &amp; Skills</h2>
+    <div class="cols">
+      <div>
+        <h4>학력</h4>
+        <p>KAIST 수리과학과 · 경영과학과 (복수전공)<br>민족사관고등학교</p>
+      </div>
+      <div>
+        <h4>기술 · 자격</h4>
+        <p>Python, R, SQL, Java, JavaScript, VBA<br>투자자산운용사, 펀드투자상담사</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 정보영. 이 사이트의 리서치는 정보 제공 목적이며 투자 권유가 아닙니다.</div>
+</footer>
+
+</body>
+</html>
